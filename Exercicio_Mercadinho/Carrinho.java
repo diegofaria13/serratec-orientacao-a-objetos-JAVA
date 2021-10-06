@@ -9,6 +9,14 @@ public class Carrinho {
 	public Carrinho() {
 		this.Itens=new ArrayList<Item>();
 	}
+
+	public void addItem(Item item) {
+		this.Itens.add(item);
+	}
+
+	public List<Item> getItens() {
+		return Itens;
+	}
 	
 	public double getValorTotal() {
 		double valorTotal = 0;
@@ -19,14 +27,5 @@ public class Carrinho {
 		
 		return valorTotal;
 	}
-	
-	public void addItem(Item item) {
-		this.Itens.add(item);
-	}
-
-	public List<Item> getItens() {
-		return Itens;
-	}
-	
-	
+		
 }

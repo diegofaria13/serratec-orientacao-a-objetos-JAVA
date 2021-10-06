@@ -4,9 +4,7 @@ public class Item {
 	private int quantidadeDeItens;
 	private Produto produto;
 
-	
 	public Item(int quantidadeDeItens, Produto produto) {
-		super();
 		this.quantidadeDeItens = quantidadeDeItens;
 		this.produto = produto;
 		
