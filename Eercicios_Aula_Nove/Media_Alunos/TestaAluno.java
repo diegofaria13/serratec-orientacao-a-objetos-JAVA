@@ -9,41 +9,29 @@ public class TestaAluno {
 	public static void main(String[] args) {
 		
 		Scanner in = new Scanner(System.in);
+		List<Aluno> listaAluno = new ArrayList();
 		
-		Aluno aluno1 = new Aluno("", 0, 0);
-		Aluno aluno2 = new Aluno("", 0, 0);
-		Aluno aluno3 = new Aluno("", 0, 0);
+		System.out.printf("Quantos alunos quer adicionar? ");
+		int numAlunos = in.nextInt();
 		
-		System.out.printf("Digite o nome do aluno: ");
-		aluno1.setNome(in.next());
-		System.out.printf("Digite a nota 1 do aluno: ");
-		aluno1.setNota1(in.nextDouble());
-		System.out.printf("Digite a nota 2 do aluno: ");
-		aluno1.setNota2(in.nextDouble());
-		System.out.println("");
+		for(int i = 0; i < numAlunos; i++ ) {
+			Aluno aluno = new Aluno("", 0, 0);
+			
+			System.out.printf("Digite o nome do aluno: ");
+			aluno.setNome(in.next());
+			System.out.printf("Digite a nota 1 do aluno: ");
+			aluno.setNota1(in.nextDouble());
+			System.out.printf("Digite a nota 2 do aluno: ");
+			aluno.setNota2(in.nextDouble());
+			System.out.println("");
+			
+			listaAluno.add(aluno);
+		}
 		
-		System.out.printf("Digite o nome do aluno: ");
-		aluno2.setNome(in.next());
-		System.out.printf("Digite a nota 1 do aluno: ");
-		aluno2.setNota1(in.nextDouble());
-		System.out.printf("Digite a nota 2 do aluno: ");
-		aluno2.setNota2(in.nextDouble());
-		System.out.println("");
 		
-		System.out.printf("Digite o nome do aluno: ");
-		aluno3.setNome(in.next());
-		System.out.printf("Digite a nota 1 do aluno: ");
-		aluno3.setNota1(in.nextDouble());
-		System.out.printf("Digite a nota 2 do aluno: ");
-		aluno3.setNota2(in.nextDouble());
-		System.out.println("");
 		
 		in.close();
-		
-		List<Aluno> listaAluno = new ArrayList();
-		listaAluno.add(aluno1);
-		listaAluno.add(aluno2);
-		listaAluno.add(aluno3);
+	
 		
 		for(int i = 0; i < listaAluno.size() ; i++)
 		try {
